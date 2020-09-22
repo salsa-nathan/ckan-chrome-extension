@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+  "name": "CKAN Helper",
+  "version": "0.1",
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*/dataset/*"
+      ],
+      "js": ["jquery-3.5.1.slim.min.js", "content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
